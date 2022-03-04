@@ -1,9 +1,12 @@
-<div class="content-header">
-            <div class="container-fluid">
-                    <h1>Board</h1>
-            </div>
-        </div>
-<div class="content">
+@extends('adminlte::page')
+
+@section('title', 'Board')
+
+@section('content_header')
+    <h1>Board</h1>
+@stop
+
+@section('content')
 <div class="container-fluid">
    <div class="row">
       <div class="col-md-3 col-sm-6 col-12">
@@ -146,3 +149,12 @@
       </div>
    </div>
 </div>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
