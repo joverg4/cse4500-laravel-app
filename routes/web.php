@@ -47,4 +47,8 @@ Route::get ('events-feed/', function () {
         }
     ]';
 });
+
+Route::fallback(function () {
+    return view('error');
+});
     
