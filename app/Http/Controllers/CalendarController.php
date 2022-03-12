@@ -39,8 +39,8 @@ class CalendarController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required',
-            'startTime' => 'required',
-            'endTime' => 'required', 
+            'start_at' => 'required',
+            'end_at' => 'required', 
        ]);
 
        $eventsfeed = Calendar::create([ 
