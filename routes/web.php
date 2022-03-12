@@ -50,10 +50,6 @@ Route::get ('events-feed/', function () {
     ]';
 });
 
-Route::fallback(function () {
-    return view('error');
-});
-
 Route::get('/db-test', function () {
     try {
          echo \DB::connection()->getDatabaseName();
@@ -74,3 +70,7 @@ Route::get ('/calendar', function () {
 });
 
 Route::resource('/event', CalendarController::class);
+
+Route::fallback(function () {
+    return view('error');
+});
