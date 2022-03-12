@@ -69,4 +69,4 @@ Route::get('/db-migrate', function () {
 
 Route::resource('/todos', TodoController::class);
 
-Route::resource('/calendar', CalendarController::class);
+Route::resource('/eventslist', CalendarController::class);
