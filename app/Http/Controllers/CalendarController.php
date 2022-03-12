@@ -37,20 +37,19 @@ class CalendarController extends Controller
      */
     public function store(Request $request)
     {
-    //    // $validated = $request->validate([
-    //         'title' => 'required',
-    //         'startTIme' => 'required',
-    //     //    'endTime' => 'required', 
-      // ]);
+        $validated = $request->validate([
+            'title' => 'required',
+             'startTime' => 'required',
+             'endTime' => 'required', 
+       ]);
 
-    //    $calendar = Calendar::create([ 
-    //         'title' => $request->title, 
-    //         'startTime' => date($request->startTime),
-    //         'endTime' => date($request->endTime), 
-      // ]);
+        $calendar = Calendar::create([ 
+            'title' => $request->title, 
+             'startTime' => date($request->startTime),
+             'endTime' => date($request->endTime), 
+       ]);
     
        return redirect('/calendar');
-       //return $this->index();
     }
 
     /**
