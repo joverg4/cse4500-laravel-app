@@ -45,8 +45,8 @@ class CalendarController extends Controller
 
        $calendar = Calendar::create([ 
             'title' => $request->title, 
-            'startTime' => date($request ->startTime),
-            'endTime' => date($request ->endTime), 
+            'startTime' => date($request->startTime),
+            'endTime' => date($request->endTime), 
        ]);
     
        return redirect('/calendar');
