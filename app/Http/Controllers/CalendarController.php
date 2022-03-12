@@ -43,7 +43,7 @@ class CalendarController extends Controller
             'endTime' => 'required', 
        ]);
 
-       $eventsfeed = Calendar::create([ 
+       $calendar = Calendar::create([ 
             'title' => $request->title, 
             'startTime' => date($request ->startTime),
             'endTime' => date($request ->endTime), 
@@ -61,7 +61,7 @@ class CalendarController extends Controller
      */
     public function show($id)
     {
-        $eventsfeed= Calendar::find($id); 
+        $calendar= Calendar::find($id); 
         return view('calendar.show',compact('calendar'));
     }
 
