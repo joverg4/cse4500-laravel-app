@@ -11,7 +11,7 @@
     @csrf
     <x-adminlte-input name="title" label="Title" />
     <x-adminlte-input name="startTime" type="datetime-local" label="Start" />
-    <x-adminlte-input name="endTIme" type="datetime-local" label="Finish" />
+    <x-adminlte-input name="endTime" type="datetime-local" label="Finish" />
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop
