@@ -15,8 +15,8 @@ class CalendarController extends Controller
     public function index()
     {
         //$calendar = Calendar::all();
-        $event = Calendar::select('title', 'startTime AS start', 'endTime AS end')->get();
-        return json_encode( compact('event')['event'] );
+        $events = Calendar::select('title', 'startTime AS start', 'endTime AS end')->get();
+        return json_encode( compact('events')['events'] );
     }
 
     /**
@@ -26,7 +26,7 @@ class CalendarController extends Controller
      */
     public function create()
     {
-        return view('event.create');
+        return view('events.create');
     }
 
     /**
